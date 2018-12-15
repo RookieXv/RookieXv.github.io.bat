@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>数据库_30道面试题 | 刘文旭</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="数据库的知识，对于开发工程师来讲，也是同样重要，是开发过程中的重中之重，很多的业务逻辑，比如：报表模块等，只要sql语句能写出来，就相当于完成大部分的功能了，这是总结的数据库题库的前30道题，关于数据库的详细优化和集群等知识，后续会再出一篇，敬请关注。以下为关于数据库在面试过程中常见的30道题，供参考。">
+<meta name="keywords" content="面试,数据库">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库_30道面试题">
+<meta property="og:url" content="http://javar.xyz/2018/12/15/2018-12-15-数据库_30道面试题/index.html">
+<meta property="og:site_name" content="刘文旭">
+<meta property="og:description" content="数据库的知识，对于开发工程师来讲，也是同样重要，是开发过程中的重中之重，很多的业务逻辑，比如：报表模块等，只要sql语句能写出来，就相当于完成大部分的功能了，这是总结的数据库题库的前30道题，关于数据库的详细优化和集群等知识，后续会再出一篇，敬请关注。以下为关于数据库在面试过程中常见的30道题，供参考。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-15T12:02:59.332Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据库_30道面试题">
+<meta name="twitter:description" content="数据库的知识，对于开发工程师来讲，也是同样重要，是开发过程中的重中之重，很多的业务逻辑，比如：报表模块等，只要sql语句能写出来，就相当于完成大部分的功能了，这是总结的数据库题库的前30道题，关于数据库的详细优化和集群等知识，后续会再出一篇，敬请关注。以下为关于数据库在面试过程中常见的30道题，供参考。">
+  
+    <link rel="alternative" href="/atom.xml" title="刘文旭" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+  
+</head></html>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://pj774zghp.bkt.clouddn.com/123.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">刘文旭</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">你好，兄dei</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/RookieXv" title="github">github</a>
+					        
+								<a class="mail" target="_blank" href="/liuwx8102@163.com" title="mail">mail</a>
+					        
+								<a class="qq" target="_blank" href="/749455620" title="qq">qq</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/网站/" style="font-size: 10px;">网站</a> <a href="/tags/面试/" style="font-size: 20px;">面试</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">刘文旭</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://pj774zghp.bkt.clouddn.com/123.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">刘文旭</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">你好，兄dei</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/RookieXv" title="github">github</a>
+			        
+						<a class="mail" target="_blank" href="/liuwx8102@163.com" title="mail">mail</a>
+			        
+						<a class="qq" target="_blank" href="/749455620" title="qq">qq</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-2018-12-15-数据库_30道面试题" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/12/15/2018-12-15-数据库_30道面试题/" class="article-date">
+  	<time datetime="2018-12-15T12:02:20.000Z" itemprop="datePublished">2018-12-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      数据库_30道面试题
+      
+          <span class="title-pop-out">[置顶]
+      
+    </span></h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据库/">数据库</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/面试/">面试</a>
+	</div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>数据库的知识，对于开发工程师来讲，也是同样重要，是开发过程中的重中之重，很多的业务逻辑，比如：报表模块等，只要sql语句能写出来，就相当于完成大部分的功能了，这是总结的数据库题库的前30道题，关于数据库的详细优化和集群等知识，后续会再出一篇，敬请关注。以下为关于数据库在面试过程中常见的30道题，供参考。</p>
+</blockquote>
+<a id="more"></a>
+<p>1：触发器的作用？</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">· 触发器是一种特殊的存储过程，主要是通过事件来触发而被执行的。</span><br><span class="line">· 它可以强化约束，来维护数据的完整性和一致性。</span><br><span class="line">· 可在写入数据表前，强制检验或转换数据。</span><br><span class="line">· 触发器发生错误时，异动的结果会被撤销。</span><br><span class="line">· 部分数据库管理系统可以针对数据定义语言（DDL）使用触发器，称为DDL触发器。</span><br><span class="line">· 可依照特定的情况，替换异动的指令 (INSTEAD <span class="keyword">OF</span>)。</span><br></pre></td></tr></table></figure>
+<p>2：触发器的限制有哪些？</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">· 一个表最多只能有三个触发器，<span class="keyword">insert</span>、<span class="keyword">update</span>、<span class="keyword">delete</span></span><br><span class="line">· 每个触发器只能用于一个表</span><br><span class="line">· 不能对视图、临时表创建触发器</span><br><span class="line">· <span class="keyword">Truncate</span> <span class="keyword">table</span>能删除表，但不能触发触发器</span><br></pre></td></tr></table></figure>
+<p>3：什么是存储过程？用什么来调用？</p>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">· 存储过程存在于大型数据库系统中，是一个预编译的SQL语句（为了完成特定功能的SQL 语句集），经过第一次编译后再次调用不需要再次编译。</span><br><span class="line">-<span class="ruby"> 优点是：</span></span><br><span class="line"><span class="ruby">    - 允许模块化的设计，就是说只需创建一次，以后在该程序中就可以调用多次。</span></span><br><span class="line"><span class="ruby">    - 如果某次操作需要执行多次SQL，使用存储过程比单纯SQL语句执行要快。</span></span><br><span class="line"><span class="ruby">    - 减少网络流量。存储过程位于服务器上，调用的时候只需要传递存储过程的名称以及参数就可以了，因此降低了网络传输的数据量。</span></span><br><span class="line"><span class="ruby">    - 安全性。参数化的存储过程可以防止SQL注入式攻击，而且可以将Grant、Deny以及Revoke权限应用于存储过程。</span></span><br><span class="line"><span class="ruby">- 调用： </span></span><br><span class="line"><span class="ruby">    - <span class="number">1</span>）可以用一个命令对象来调用存储过程。 </span></span><br><span class="line"><span class="ruby">    - <span class="number">2</span>）可以供外部程序调用，比如：java程序。</span></span><br></pre></td></tr></table></figure>
+<p>4：索引的作用？它的优缺点是什么？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">· 索引就一种特殊的查询表，数据库的搜索可以利用它加速对数据的检索。</span><br><span class="line">· 它很类似与现实生活中书的目录，不需要查询整本书内容就可以找到想要的数据。</span><br><span class="line">· 索引可以是唯一的，创建索引允许指定单个列或者是多个列。</span><br><span class="line">· 缺点是它减慢了数据录入的速度，同时也增加了数据库的尺寸大小。</span><br></pre></td></tr></table></figure>
+<p>5：什么样的字段适合建索引？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">· 唯一</span><br><span class="line">· 主、外键</span><br><span class="line">· 不为空</span><br><span class="line">· 表之间的关联字段</span><br><span class="line">· 查询比较频繁的字段</span><br></pre></td></tr></table></figure>
+<p>6：索引类型有哪些？</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Single</span> column 单行索引</span><br><span class="line"><span class="symbol">Concatenated</span> 多行索引</span><br><span class="line"><span class="symbol">Unique</span> 唯一索引</span><br><span class="line"><span class="symbol">NonUnique</span> 非唯一索引</span><br><span class="line"><span class="symbol">Function</span>-<span class="keyword">based </span>函数索引</span><br><span class="line"><span class="symbol">Domain</span> 域索引 物理上：</span><br><span class="line"><span class="symbol">Partitioned</span> 分区索引</span><br><span class="line"><span class="symbol">NonPartitioned</span> 非分区索引</span><br><span class="line"><span class="keyword">B-tree </span>：</span><br><span class="line"><span class="symbol">Normal</span> 正常型<span class="keyword">B树</span></span><br><span class="line"><span class="keyword">Rever </span>Key 反转型<span class="keyword">B树 </span></span><br><span class="line"><span class="keyword">Bitmap </span>位图索引</span><br></pre></td></tr></table></figure>
+<p>7：什么是事务？什么是锁？</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">- </span>事务就是被绑定在一起作为一个逻辑工作单元的SQL语句分组</span><br><span class="line"><span class="code">  如果任何一个语句操作失败那么整个操作就被失败，以后操作就会回滚到操作前状态，或者是上有个节点。</span></span><br><span class="line"><span class="code">  为了确保要么执行，要么不执行，就可以使用事务。</span></span><br><span class="line"><span class="code">  要将有组语句作为事务考虑，就需要通过ACID测试：</span></span><br><span class="line"><span class="code">  即原子性，一致性，隔离性和持久性。 </span></span><br><span class="line"><span class="bullet">- </span>锁：锁是实现事务的关键，锁可以保证事务的完整性和并发性。</span><br><span class="line"><span class="code">     与现实生活中锁一样，它可以使某些数据的拥有者，在某段时间内不能使用某些数据或数据结构。</span></span><br><span class="line"><span class="code">     当然锁还分级别的，比如页级锁、行级锁等。</span></span><br></pre></td></tr></table></figure>
+<p>8：什么叫视图？游标是什么？</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">- </span>视图：是一种虚拟的表，具有和物理表相同的功能。</span><br><span class="line"><span class="code">       可以对视图进行增，改，查，操作，试图通常是有一个表或者多个表的行或列的子集。</span></span><br><span class="line"><span class="code">       对视图的修改会影响基本表。它使得我们获取数据更容易，相比多表查询。 </span></span><br><span class="line"><span class="bullet">- </span>游标：是对查询出来的结果集作为一个单元来有效的处理。</span><br><span class="line"><span class="code">       游标可以定在该单元中的特定行，从结果集的当前行检索一行或多行。</span></span><br><span class="line"><span class="code">       可以对结果集当前行做修改。</span></span><br><span class="line"><span class="code">       一般不使用游标，但是需要逐条处理数据的时候，游标显得十分重要。</span></span><br></pre></td></tr></table></figure>
+<p>9：视图的优缺点？</p>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-<span class="ruby"> 优点： </span></span><br><span class="line"><span class="ruby">    - 对数据库的访问，因为视图可以有选择性的选取数据库里的一部分。 </span></span><br><span class="line"><span class="ruby">    - 用户通过简单的查询可以从复杂查询中得到结果。 </span></span><br><span class="line"><span class="ruby">    - 维护数据的独立性，试图可从多个表检索数据。 </span></span><br><span class="line"><span class="ruby">    - 对于相同的数据可产生不同的视图。 </span></span><br><span class="line"><span class="ruby">- 缺点： </span></span><br><span class="line"><span class="ruby">    - 性能：查询视图时，必须把视图的查询转化成对基本表的查询，如果这个视图是由一个复杂的多表查询所定义，那么，那么就无法更改数据</span></span><br></pre></td></tr></table></figure>
+<p>10：列举几种表连接方式,有什么区别？</p>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-<span class="ruby"> 内连接、自连接、外连接（左、右、全）、交叉连接 </span></span><br><span class="line"><span class="ruby">    - 内连接：只有两个元素表相匹配的才能在结果集中显示。 </span></span><br><span class="line"><span class="ruby">    - 外连接： </span></span><br><span class="line"><span class="ruby">        - 左外连接<span class="symbol">:</span>左边为驱动表，驱动表的数据全部显示，匹配表的不匹配的不会显示。 </span></span><br><span class="line"><span class="ruby">        - 右外连接<span class="symbol">:</span>右边为驱动表，驱动表的数据全部显示，匹配表的不匹配的不会显示。 </span></span><br><span class="line"><span class="ruby">        - 全外连接：连接的表中不匹配的数据全部会显示出来。 </span></span><br><span class="line"><span class="ruby">    - 交叉连接： 笛卡尔效应，显示的结果是链接表数的乘积。</span></span><br></pre></td></tr></table></figure>
+<p>11：主键和外键的区别？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">· 主键在本表中是唯一的、不可唯空的，外键可以重复可以唯空；</span><br><span class="line">· 外键和另一张表的主键关联，不能创建对应表中不存在的外键。</span><br></pre></td></tr></table></figure>
+<p>12：在数据库中查询语句速度很慢，如何优化？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">· 建索引 </span><br><span class="line">· 减少表之间的关联 </span><br><span class="line">· 优化sql，不要让sql做全表查询</span><br><span class="line">· 简化查询字段，没用的字段不要，已经对返回结果的控制，尽量返回少量数据 </span><br><span class="line">· 尽量用PreparedStatement来查询，不要用Statement</span><br></pre></td></tr></table></figure>
+<p>13：数据库三范式是什么?</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">· 第一范式：列不可再分 </span><br><span class="line">· 第二范式：行可以唯一区分，主键约束 </span><br><span class="line">· 第三范式：表的非主属性不能依赖与其他表的非主属性外键约束，且三大范式是一级一级依赖的，第二范式建立在第一范式上，第三范式建立第一第二范式上</span><br></pre></td></tr></table></figure>
+<p>14：union和union all有什么不同?</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">· <span class="built_in">UNION</span>在进行表链接后会筛选掉重复的记录，所以在表链接后会对所产生的结果集进行排序运算，删除重复的记录再返回结果。</span><br><span class="line">  实际大部分应用中是不会产生重复的记录，最常见的是过程表与历史表<span class="built_in">UNION</span>。 </span><br><span class="line"></span><br><span class="line">· <span class="built_in">UNION</span> ALL只是简单的将两个结果合并后就返回。这样，如果返回的两个结果集中有重复的数据，那么返回的结果集就会包含重复的数据了。</span><br><span class="line"></span><br><span class="line">· 从效率上说，<span class="built_in">UNION</span> ALL 要比<span class="built_in">UNION</span>快很多，所以，如果可以确认合并的两个结果集中不包含重复的数据的话，那么就使用<span class="built_in">UNION</span> ALL。</span><br></pre></td></tr></table></figure>
+<p>15：varchar2、varchar、char有什么区别？</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- Char的长度是固定的，而varchar2的长度是可以变化的</span><br><span class="line">    比如，存储字符串“abc”对于char(<span class="number">20</span>)，表示你存储的字符将占<span class="number">20</span>个字节，包含<span class="number">17</span>个空，而同样的varchar2（<span class="number">20</span>）只占了<span class="number">3</span>个字节，<span class="number">20</span>只是最大值，当你存储的字符小于<span class="number">20</span>时，按实际长度存储。 </span><br><span class="line">- char的效率要被varchar2的效率高。 </span><br><span class="line">- 目前varchar是varchar2的同义词</span><br><span class="line">    工业标准的varchar类型可以存储空字符串，但是oracle不能这样做，尽管它保留以后这样做的权利。</span><br><span class="line">    Oracle自己开发了一个数据类型varchar2,这个类型不是一个标准的varchar，他将在数据库中varchar列可以存储空字符串的特性改为存储null值，如果你想有向后兼容的能力，oracle建议使用varchar2而不是varchar</span><br></pre></td></tr></table></figure>
+<p>16：Oracle语句有多少类型？</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">- Oracle语句分三类：DDL、DML、DCL。 </span><br><span class="line">    - DDL（Data Definition Language）数据定义语言，包括： </span><br><span class="line">        - <span class="keyword">Create</span>语句：可以创建数据库和数据库的一些对象。 </span><br><span class="line">        - <span class="keyword">Drop</span>语句：可以删除数据表、索引、触发程序、条件约束以及数据表的权限等</span><br><span class="line">        - <span class="keyword">Alter</span>语句：修改数据表定义及属性。 </span><br><span class="line">        - <span class="keyword">Truncate</span>语句：删除表中的所有记录,包括所有空间分配的记录被删除。 </span><br><span class="line">    - DML（<span class="keyword">Data</span> Manipulation <span class="keyword">Language</span>）数据操控语言，包括： </span><br><span class="line">        - <span class="keyword">Insert</span>语句：向数据表张插入一条记录。 </span><br><span class="line">        - <span class="keyword">Delete</span>语句：删除数据表中的一条或多条记录，也可以删除数据表中的所有记录，但是它的操作对象仍是记录。 </span><br><span class="line">        - <span class="keyword">Update</span>语句：用于修改已存在表中的记录的内容。 </span><br><span class="line">    - DCL（<span class="keyword">Data</span> Control <span class="keyword">Language</span>）数据库控制语言，包括： </span><br><span class="line">        - <span class="keyword">Grant</span>语句：允许对象的创建者给某用户或某组或所有用户（<span class="keyword">PUBLIC</span>）某些特定的权限。 </span><br><span class="line">        - <span class="keyword">Revoke</span>语句：可以废除某用户或某组或所有用户访问权限</span><br></pre></td></tr></table></figure>
+<p>17：从数据库中随机取50条？</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">· ORACLE</span><br><span class="line">    - <span class="keyword">select</span> * <span class="keyword">from</span> (<span class="keyword">select</span> * <span class="keyword">from</span> t_example <span class="keyword">order</span> <span class="keyword">by</span> dbms_random.value) <span class="keyword">where</span> <span class="keyword">rownum</span> &lt;= <span class="number">50</span></span><br><span class="line">· MYSQL</span><br><span class="line">    -  <span class="keyword">select</span> * <span class="keyword">from</span> hj_user <span class="keyword">order</span> <span class="keyword">by</span> <span class="keyword">rand</span>() <span class="keyword">limit</span> <span class="number">50</span></span><br><span class="line">· SQLServer</span><br><span class="line">    - <span class="keyword">select</span> top <span class="number">20</span>  * <span class="keyword">from</span>  tableName <span class="keyword">order</span> <span class="keyword">by</span> newid()</span><br></pre></td></tr></table></figure>
+<p>18：order by与group by的区别？</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- <span class="keyword">order</span> <span class="title">by</span> 排序查询、asc升序、desc降序 </span><br><span class="line">- <span class="keyword">group</span> <span class="title">by</span> 分组查询、having 只能用于<span class="keyword">group</span> <span class="title">by</span>子句、作用于组内。</span><br><span class="line">    having条件子句可以直接跟函数表达式。</span><br><span class="line">    使用<span class="keyword">group</span> <span class="title">by</span> 子句的查询语句需要使用聚合函数。</span><br></pre></td></tr></table></figure>
+<p>19：commit在哪里会运用</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- Oracle的<span class="keyword">commit</span>就是DML语句提交数据（这里是释放锁不是锁表），在未提交前你前面的操作更新的都是内存，没有更新到物理文件中。 </span><br><span class="line">- 执行<span class="keyword">commit</span>从用户角度讲就是更新到物理文件了，事实上<span class="keyword">commit</span>时还没有写<span class="built_in">date</span> <span class="keyword">file</span>，而是记录了<span class="keyword">redo</span> <span class="keyword">log</span> <span class="keyword">file</span>，要从内存写到<span class="keyword">data</span>物理文件，需要触发检查点，由DBWR这个后台进程来写，这里内容有点多的，如果不深究的话你就理解成<span class="keyword">commit</span>即为从内存更新到物理文件。</span><br><span class="line">- <span class="keyword">insert</span>以后<span class="keyword">commit</span>之前是锁表的状态，其他事务无法对该表进行操作</span><br><span class="line">- 如果不提交的话，那么这个表就被锁了</span><br></pre></td></tr></table></figure>
+<p>20：序列的作用</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">· <span class="keyword">Oracle使用序列来生成唯一编号，用来处理一个表中自增字段。 </span></span><br><span class="line">· <span class="keyword">Oracle序列是原子对象，并且是一致的。</span></span><br><span class="line"><span class="keyword"> </span>   也就是说，一旦您访问一个序列号，<span class="keyword">Oracle将在处理下一个请求之前自动递增下一个编号，从而确保不会出现重复值。</span></span><br></pre></td></tr></table></figure>
+<p>21：表和视图的关系</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">· 视图其实就是一条查询sql语句，用于显示一个或多个表或其他视图中的相关数据。 </span><br><span class="line">· 表就是关系数据库中实际存储数据用的。</span><br></pre></td></tr></table></figure>
+<p>22：Oracle基本数据类型</p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">· 字符串类型：<span class="built_in">char</span>、nchar、varchar、varchar2、nvarchar2 </span><br><span class="line">· 数字类型： <span class="keyword">number</span>、<span class="keyword">integer</span> </span><br><span class="line">· 浮点类型： binary_float、binary_double、<span class="built_in">float</span> </span><br><span class="line">· 日期类型： date、 timestamp </span><br><span class="line">· LOB类型： blob、clob、nclob、bfile</span><br></pre></td></tr></table></figure>
+<p>23：truncate与 delete区别</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- <span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> 在功能上与不带 <span class="keyword">WHERE</span> 子句的 <span class="keyword">DELETE</span> 语句相同：二者均删除表中的全部行。但 <span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> 比 <span class="keyword">DELETE</span> 速度快，且使用的系统和事务日志资源少。 </span><br><span class="line">- <span class="keyword">DELETE</span> 语句每次删除一行，并在事务日志中为所删除的每行记录一项。</span><br><span class="line">- <span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> 通过释放存储表数据所用的数据页来删除数据，并且只在事务日志中记录页的释放。 </span><br><span class="line">    - <span class="keyword">TRUNCATE</span>、<span class="keyword">DELETE</span>、<span class="keyword">DROP</span> 比较：</span><br><span class="line">        - <span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> ：删除内容、释放空间但不删除定义。</span><br><span class="line">        - <span class="keyword">DELETE</span> <span class="keyword">TABLE</span>: 删除内容不删除定义，不释放空间。</span><br><span class="line">        - <span class="keyword">DROP</span> <span class="keyword">TABLE</span> ：删除内容和定义，释放空间。</span><br></pre></td></tr></table></figure>
+<p>24：Oracle获取系统时间</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- select to_char(<span class="name">sysdate</span>, 'yyyy-MM-dd HH24<span class="symbol">:mi</span><span class="symbol">:ss</span>') from dual<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<p>25：数据库查询结果怎么去重</p>
+<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">· 使用<span class="keyword">distinct</span>关键字</span><br></pre></td></tr></table></figure>
+<p>26：事务四大特性</p>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-<span class="ruby"> ACID：</span></span><br><span class="line"><span class="ruby">    - 原子性：要么执行，要么不执行 </span></span><br><span class="line"><span class="ruby">    - 隔离性：所有操作全部执行完以前，其它会话不能看到过程 </span></span><br><span class="line"><span class="ruby">    - 一致性：事务前后，数据总额一致 </span></span><br><span class="line"><span class="ruby">    - 持久性：一旦事务提交，对数据的改变就是永久的</span></span><br></pre></td></tr></table></figure>
+<p>27：InnoDB索引和MyISAM索引的区别？</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">· 主索引的区别，<span class="type">InnoDB</span>的数据文件本身就是索引文件。而<span class="type">MyISAM</span>的索引和数据是分开的。 </span><br><span class="line">· 辅助索引的区别：<span class="type">InnoDB</span>的辅助索引<span class="class"><span class="keyword">data</span>域存储相应记录主键的值而不是地址。而<span class="type">MyISAM</span>的辅助索引和主索引没有多大区别。</span></span><br><span class="line">· <span class="type">MyISAM</span>表锁，不支持事务，表损坏率较高</span><br><span class="line">· <span class="type">InnoDB</span>行锁，支持事务</span><br></pre></td></tr></table></figure>
+<p>28：什么是内存泄漏？</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 一般我们所说的内存泄漏指的是堆内存的泄漏。堆内存是程序从堆中为其分配的，大小任意的，使用完后要显示释放内存。</span><br><span class="line">- 当应用程序用关键字<span class="keyword">new</span>等 创建对象时，就从堆中为它分配一块内存，使用完后程序调用<span class="built_in">free</span>或者<span class="keyword">delete</span>释放该内存，否则就说该内存就不能被使用，我们就说该内存被泄漏了。</span><br></pre></td></tr></table></figure>
+<p>29：数据库常见的锁有哪些？</p>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-<span class="ruby"> 行锁，表锁；乐观锁，悲观锁</span></span><br><span class="line"><span class="ruby">    - 行锁：开销大，加锁慢；会出现死锁；锁定粒度最小，发生锁冲突的概率最低，并发度也最高</span></span><br><span class="line"><span class="ruby">    - 表锁：开销小，加锁快；不会出现死锁；锁定粒度大，发生锁冲突的概率最高，并发度最低</span></span><br><span class="line"><span class="ruby">    - 悲观锁：假定会发生并发冲突，屏蔽一切可能违反数据完整性的操作</span></span><br><span class="line"><span class="ruby">    - 乐观锁：假设不会发生并发冲突，只在提交操作时检查是否违反数据完整性。不能解决脏读问题</span></span><br></pre></td></tr></table></figure>
+<p>30：谈一谈数据库优化方面的经验？</p>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">从三方面去回答：</span><br><span class="line">-<span class="ruby"> <span class="number">1</span>：数据库设计</span></span><br><span class="line"><span class="ruby">    - 数据库表：字段类型、字段长度、注释、字段命名规范</span></span><br><span class="line"><span class="ruby">    - 数据库索引：外键、关联字段、查询频率比较高的字段、</span></span><br><span class="line"><span class="ruby">            如果数据表字段&gt;<span class="number">20</span>，则最多支持<span class="number">16</span>个索引</span></span><br><span class="line"><span class="ruby">            如果数据表字段&lt;<span class="number">20</span>，则根据查询频率字段来定</span></span><br><span class="line"><span class="ruby">    - 数据库视图：相当于一张临时表，业务中，尽量少使用</span></span><br><span class="line"><span class="ruby">    - 数据库引擎：根据业务，选择对应的表引擎技术</span></span><br><span class="line"><span class="ruby">    - 数据库存储过程：尽量少用</span></span><br><span class="line"><span class="ruby">    - 数据库字符：UTF-<span class="number">8</span>、或者和页面字符保持一致</span></span><br><span class="line"><span class="ruby">    - 数据库监听器/触发器：一般用于调度任务或者备份还原</span></span><br><span class="line"><span class="ruby">- <span class="number">2</span>：业务调用的sql语句优化</span></span><br><span class="line"><span class="ruby">    - 尽量少关联表，效率最高关联<span class="number">4</span>张表，如果多于<span class="number">4</span>张表，则需要开启两个链接事务，但是这两个事务，必须在一个service当中。</span></span><br><span class="line"><span class="ruby">    - 如果是查询语句，则不建议使用*</span></span><br><span class="line"><span class="ruby">    - 如果是查询语句，where条件后面，最好使用索引字段进行关联</span></span><br><span class="line"><span class="ruby">- <span class="number">3</span>：数据库服务器的搭建（集群）</span></span><br><span class="line"><span class="ruby">    - 主从配置：</span></span><br><span class="line"><span class="ruby">    - 读写分离：</span></span><br><span class="line"><span class="ruby">    - 自动化（容器）：</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p><em>转自码神联盟。</em></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/12/15/2018-12-15-Java_100道面试题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java_100道面试题</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="ds-share share" data-thread-key="2018-12-15-数据库_30道面试题" data-title="数据库_30道面试题" data-url="http://javar.xyz/2018/12/15/2018-12-15-数据库_30道面试题/" data-images="http://pj774zghp.bkt.clouddn.com/123.jpg" data-content="数据库_30道面试题">
+    <div class="ds-share-inline">
+      <ul class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ 
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2018 刘文旭
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>
