@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Hexo+git搭建个人网站#文章標題 | 刘文旭</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="搭建网站基础篇">
+<meta name="keywords" content="建站,Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo+git搭建个人网站#文章標題">
+<meta property="og:url" content="http://javar.xyz/2017/12/16/建站（基础篇）/index.html">
+<meta property="og:site_name" content="刘文旭">
+<meta property="og:description" content="搭建网站基础篇">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021222335756-1508643846.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021222542474-1351750125.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021223101193-1524328031.png">
+<meta property="og:image" content="c:/Users/刘文旭/AppData/Roaming/Typora/typora-user-images/1544878755070.png">
+<meta property="og:image" content="c:/Users/刘文旭/AppData/Roaming/Typora/typora-user-images/1544878815127.png">
+<meta property="og:image" content="c:/Users/刘文旭/AppData/Roaming/Typora/typora-user-images/1544877216312.png">
+<meta property="og:image" content="c:/Users/刘文旭/AppData/Roaming/Typora/typora-user-images/1544877352521.png">
+<meta property="og:image" content="c:/Users/刘文旭/AppData/Roaming/Typora/typora-user-images/1544877646890.png">
+<meta property="og:image" content="c:/Users/刘文旭/AppData/Roaming/Typora/typora-user-images/1544879252303.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021230203912-509196411.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021230241646-1660449756.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021231705474-1404994153.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021231833912-663774637.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021232311912-1198771378.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021232413224-1288183746.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021233157224-1386748377.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021233543052-76995831.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021233630568-279882178.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021234107209-1205335399.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021234314146-695835137.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021234528552-610835964.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021234636834-426105098.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021234906724-1938556332.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021235116271-1521882533.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021235812974-84318377.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021235722365-818312042.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171022000227834-1991784353.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171022000508865-46787156.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171022001237943-657272339.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171022001410662-1611125904.png">
+<meta property="og:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171022001738037-1195721153.png">
+<meta property="og:updated_time" content="2018-12-16T12:21:03.325Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo+git搭建个人网站#文章標題">
+<meta name="twitter:description" content="搭建网站基础篇">
+<meta name="twitter:image" content="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021222335756-1508643846.png">
+  
+    <link rel="alternative" href="/atom.xml" title="刘文旭" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+  
+</head></html>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://pj774zghp.bkt.clouddn.com/123.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">刘文旭</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">你好，兄dei</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/RookieXv" title="github">github</a>
+					        
+								<a class="mail" target="_blank" href="/liuwx8102@163.com" title="mail">mail</a>
+					        
+								<a class="qq" target="_blank" href="/749455620" title="qq">qq</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/建站/" style="font-size: 10px;">建站</a> <a href="/tags/数据库/" style="font-size: 10px;">数据库</a> <a href="/tags/网站/" style="font-size: 10px;">网站</a> <a href="/tags/面试/" style="font-size: 20px;">面试</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">刘文旭</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://pj774zghp.bkt.clouddn.com/123.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">刘文旭</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">你好，兄dei</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/RookieXv" title="github">github</a>
+			        
+						<a class="mail" target="_blank" href="/liuwx8102@163.com" title="mail">mail</a>
+			        
+						<a class="qq" target="_blank" href="/749455620" title="qq">qq</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-建站（基础篇）" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/12/16/建站（基础篇）/" class="article-date">
+  	<time datetime="2017-12-16T15:47:44.000Z" itemprop="datePublished">2017-12-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo+git搭建个人网站#文章標題
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/建站/">建站</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Hexo教程/">Hexo教程</a>
+	</div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>​    <strong>搭建个人博客=域名(外网可访问的地址)+外网服务器(外网存储文件图片的地方)+解析(本地与服务器做映射)</strong></p>
+<a id="more"></a>
+<p>​    作为一个程序猿来说，大多的大牛都是使用的是msdn/github这些来交流技术，但是我后来发现csdn上面好多的大牛都已经摒弃csdn，自己搭建个人博客进行发表文章记录点滴了。</p>
+<p>​    看到他们牛b的个人网站，自己当然也想拥有一个自己的博客啦，因为这是一种信仰。</p>
+<p>​    今天呢，花了半天的时间，研究了一下，颇有收获，而我在找资料的过程中，都是这个博客找点那个博客找点，都木有一个博客的教程是很详细且到位的，哎，醉了，最后啰嗦一句，有什么问题，及时下方评论(不是私信)，因为我几乎每天登陆博客，所以看到后会及时回复大家的。</p>
+<h4 id="一、准备工作："><a href="#一、准备工作：" class="headerlink" title="一、准备工作："></a>一、准备工作：</h4><ol>
+<li>安装Git：<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a></li>
+<li><p>安装node.js：<a href="http://nodejs.org/download/" target="_blank" rel="noopener">http://nodejs.org/download/</a></p>
+</li>
+<li><p>安装Node.js和配置好Node.js环境，打开cmd命令行，成功界面如下</p>
+</li>
+</ol>
+<p><img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021222335756-1508643846.png" alt="img"></p>
+<ol start="4">
+<li><p>安装Git和配置好Git环境，安装成功的象征就是在电脑上任何位置<strong>鼠标右键</strong>能够出现如下两个选择</p>
+<p><img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021222542474-1351750125.png" alt="img"></p>
+</li>
+</ol>
+<p>注意：一般出于安全考虑，只有在Git Bash Here中才能进行Git的相关操作。如果需要在cmd命令行里调用Git，那么就要配置电脑的环境变量Path，或者在安装的时候选择use Git from the Windows Command Prompt。这个可有可无，影响不大，成功配置的界面如图</p>
+<p><img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021223101193-1524328031.png" alt="img"></p>
+<p>具体安装过程不再详细说明，不懂的自行百度！！！</p>
+<h4 id="二、创建git仓库"><a href="#二、创建git仓库" class="headerlink" title="二、创建git仓库"></a>二、创建git仓库</h4><ol>
+<li>Github账户注册和新建项目，项目必须要遵守<strong>格式：账户名.github.io</strong>，不然接下来会有很多麻烦。并且需要<strong>勾选Initialize this repository with a README</strong></li>
+</ol>
+<p><img src="C:\Users\刘文旭\AppData\Roaming\Typora\typora-user-images\1544878755070.png" alt="1544878755070"></p>
+<ol start="2">
+<li>在建好的项目右侧有个settings按钮，点击它，向下拉到GitHub Pages，你会看到那边有个网址，访问它，你将会惊奇的发现该项目已经被部署到网络上，能够通过外网来访问它。 </li>
+</ol>
+<p><img src="C:\Users\刘文旭\AppData\Roaming\Typora\typora-user-images\1544878815127.png" alt="1544878815127"></p>
+<h4 id="三、安装Hexo："><a href="#三、安装Hexo：" class="headerlink" title="三、安装Hexo："></a>三、<strong>安装Hexo</strong>：</h4><ol>
+<li>首先在本地磁盘中建立一个Hexo文件夹用于存储本地文件(做本地文件保存以及测试使用)</li>
+</ol>
+<p><img src="C:\Users\刘文旭\AppData\Roaming\Typora\typora-user-images\1544877216312.png" alt="1544877216312"></p>
+<ol start="2">
+<li>然后在文件夹中右击打开git命令框(不能直接在桌面右击，命令行无效)</li>
+</ol>
+<p><img src="C:\Users\刘文旭\AppData\Roaming\Typora\typora-user-images\1544877352521.png" alt="1544877352521"></p>
+<ol start="3">
+<li>在git命令框中安装 Hexo</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
+<p><img src="C:\Users\刘文旭\AppData\Roaming\Typora\typora-user-images\1544877646890.png" alt="1544877646890"></p>
+<ol start="4">
+<li>输入<strong>hexo -v</strong>，检查hexo是否安装成功</li>
+</ol>
+<p><img src="C:\Users\刘文旭\AppData\Roaming\Typora\typora-user-images\1544879252303.png" alt="1544879252303"></p>
+<ol start="5">
+<li>输入hexo init，初始化该文件夹（有点漫长的等待。。。）</li>
+</ol>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo init</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021230203912-509196411.png" alt="img"></p>
+<p><img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021230241646-1660449756.png" alt="img"></p>
+<p>看到后面的“Start blogging with Hexo！”，激动有木有！！！！！</p>
+<ol start="6">
+<li>输入npm install hexo-deployer-git –save，安装所需要的组件</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+<ol start="7">
+<li>输入hexo g，首次体验Hexo</li>
+</ol>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo g</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021231705474-1404994153.png" alt="img"></p>
+<ol start="8">
+<li>输入hexo s，开启服务器，访问该网址（<strong>127.0.0.1:4000</strong>），正式体验Hexo</li>
+</ol>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo s</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021231833912-663774637.png" alt="img"></p>
+<p><strong>问题：假如页面一直无法跳转，那么可能端口被占用了。此时我们ctrl+c停止服务器，接着输入“hexo server -p 端口号”来改变端口号</strong></p>
+<p><img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021232311912-1198771378.png" alt="img"></p>
+<p>那么出现如下图就成功了</p>
+<p><img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021232413224-1288183746.png" alt="img"></p>
+<h4 id="四、将Hexo与Github-page联系起来"><a href="#四、将Hexo与Github-page联系起来" class="headerlink" title="四、将Hexo与Github page联系起来"></a>四、将Hexo与Github page联系起来</h4><p><strong>设置Git的user name和email（如果是第一次的话）</strong></p>
+<p><strong>不是首次使用git请忽略本章节</strong></p>
+<p> <img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021233157224-1386748377.png" alt="img"></p>
+<p>上图是在其文件夹里面鼠标右键，点击Git Base Here。这里“feng”可以替换成自己的用户名，邮箱可以替换成自己的邮箱</p>
+<p>输入cd ~/.ssh，检查是否由.ssh的文件夹</p>
+<p><img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021233543052-76995831.png" alt="img"></p>
+<p>输入ls，列出该文件下的内容。下图说明存在</p>
+<p><img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021233630568-279882178.png" alt="img"></p>
+<p> 输入ssh-keygen -t rsa -C “<a href="mailto:929762930@qq.com" target="_blank" rel="noopener">929762930@qq.com</a>”，连续三个回车，生成密钥，最后得到了两个文件：id_rsa和id_rsa.pub（默认存储路径是：C:\Users\Administrator.ssh）。</p>
+<p> <img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021234107209-1205335399.png" alt="img"></p>
+<p> 输入eval “$(ssh-agent -s)”，添加密钥到ssh-agent</p>
+<p><img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021234314146-695835137.png" alt="img"></p>
+<p> 再输入ssh-add ~/.ssh/id_rsa，添加生成的SSH key到ssh-agent</p>
+<p><img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021234528552-610835964.png" alt="img"></p>
+<p> 登录Github，点击头像下的settings，添加ssh</p>
+<p> <img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021234636834-426105098.png" alt="img"></p>
+<p>新建一个new ssh key，将id_rsa.pub文件里的内容复制上去</p>
+<p><img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021234906724-1938556332.png" alt="img"></p>
+<p>输入ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>，测试添加ssh是否成功。如果看到Hi后面是你的用户名，就说明成功了</p>
+<p><img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021235116271-1521882533.png" alt="img"></p>
+<p><strong>问题：</strong>假如ssh-key配置失败，那么只要以下步骤就能完全解决</p>
+<p>首先，清除所有的key-pair<br>ssh-add -D<br>rm -r ~/.ssh<br>删除你在github中的public-key</p>
+<p>重新生成ssh密钥对<br>ssh-keygen -t rsa -C “<a href="mailto:xxx@xxx.com" target="_blank" rel="noopener">xxx@xxx.com</a>“</p>
+<p>接下来正常操作<br>在github上添加公钥public-key:<br>1、首先在你的终端运行 xclip -sel c ~/.ssh/id_rsa.pub将公钥内容复制到剪切板<br>2、在github上添加公钥时，直接复制即可<br>3、保存</p>
+<p>测试：</p>
+<p>在终端 ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a></p>
+<p>6、配置Deployment，在其文件夹中，找到_config.yml文件，修改repo值（在末尾）</p>
+<p> <img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021235812974-84318377.png" alt="img"></p>
+<p>repo值是你在github项目里的ssh（右下角）</p>
+<p><img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171021235722365-818312042.png" alt="img"></p>
+<p>7、新建一篇博客，在cmd执行命令：hexo new post “博客名”</p>
+<p><img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171022000227834-1991784353.png" alt="img"></p>
+<p> 这时候在文件夹_posts目录下将会看到已经创建的文件</p>
+<p><img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171022000508865-46787156.png" alt="img"></p>
+<p>在生成以及部署文章之前，需要安装一个扩展：npm install hexo-deployer-git –save</p>
+<p><img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171022001237943-657272339.png" alt="img"></p>
+<p>使用编辑器编好文章，那么就可以使用命令：hexo d -g，生成以及部署了</p>
+<p> <img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171022001410662-1611125904.png" alt="img"></p>
+<p>部署成功后访问你的地址：http://用户名.github.io。那么将看到生成的文章</p>
+<p><img src="https://images2017.cnblogs.com/blog/1108615/201710/1108615-20171022001738037-1195721153.png" alt="img"></p>
+<p> 好了，到此为止，最基本的也是最全面的hexo+github搭建博客完结。接下来是进阶的操作（<strong>自定义网站主题</strong>）</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/12/15/2018-12-15-常用网站/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          常用网站
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+<div class="ds-share share" data-thread-key="建站（基础篇）" data-title="Hexo+git搭建个人网站#文章標題" data-url="http://javar.xyz/2017/12/16/建站（基础篇）/" data-images="http://pj774zghp.bkt.clouddn.com/123.jpg" data-content="Hexo+git搭建个人网站#文章標題">
+    <div class="ds-share-inline">
+      <ul class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ 
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2018 刘文旭
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>
