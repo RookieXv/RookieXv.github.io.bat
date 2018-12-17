@@ -211,98 +211,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h1 id="mysql开发规范"><a href="#mysql开发规范" class="headerlink" title="mysql开发规范"></a><a href="https://www.cnblogs.com/LipeiNet/p/7799366.html" target="_blank" rel="noopener">mysql开发规范</a></h1><h2 id="1：库表设计"><a href="#1：库表设计" class="headerlink" title="1：库表设计"></a>1：库表设计</h2><ul>
-<li>库名、表名、字段名采用小写字母,并采用下划线分割;对相关功能的表应该使用相同的前缀，如member_xxx,前缀通常为库名或依赖主实体对象;</li>
-<li>所有的表以及字段都必须有备注、详细说明表以及字段的含义</li>
-<li>涉及货币金额或其他精度敏感的数据必须使用定点数Decimal来替代float和double</li>
-<li>库名、表名、字段名禁止使用mysql保留字,如data、like、desc等</li>
-<li>控制表字段数,单表不超过50个纯int/20个varchar(10)字段等同存储体积的字段数,上限控制在20~50</li>
-</ul>
-<h2 id="2：索引设计"><a href="#2：索引设计" class="headerlink" title="2：索引设计"></a>2：索引设计</h2><p>基本规则：索引不是越多越好,能不添加索引尽量不添加索引,过多的索引会严重降低插入和更新的效率，并带来读写冲突和死锁</p>
-<ul>
-<li>索引名称必须使用小写，普通索引按照idx_字段名<em>字段名[</em>字段名]进行命名,唯一索引按照 uniq_字段名<em>字段名[</em>字段名]进行名</li>
-<li>表必须有主键，推荐使用独立业务的AUTO_INCREMENT列或全局ID生成器做主键，禁止使用多字段做联合主键</li>
-<li>不使用UUID/MD5/HASH等函数生成无规则值做主键,效率极差</li>
-<li>索引数量控制</li>
-</ul>
-<ol>
-<li>单张表中索引数量不超过5个</li>
-<li>单个索引中的字段数不超过5个</li>
-<li>对字符串使用前缀索引,索引长度不超过10个字符</li>
-</ol>
-<ul>
-<li>索引字段的顺序需要考虑每个字段去重以后的数量,区分度最大的[个数最多的]放在前面</li>
-<li>合理创建联合索引(避免冗余),符合最左前缀原则：（a,b,c）相对于（a）、(a,b)、(a,b,c)</li>
-<li>可能需要添加索引的字段</li>
-</ul>
-<ol>
-<li>Order by，group by，distinct的字符按需要添加在索引的后面</li>
-<li>update,delete语句需要根据where条件添加索引</li>
-<li>对于join操作,需要join字段上添加索引</li>
-</ol>
-<ul>
-<li>索引使用禁忌</li>
-</ul>
-<ol>
-<li>不使用%前导的查询,如like ‘%ab’</li>
-<li>不使用负向查询，如 not in/not lilke/&lt;&gt;</li>
-<li>不在区分度的列上建立索引,如性别</li>
-<li>不在索引列进行数学运算和函数运算</li>
-</ol>
-<p>​        <strong>示例：假设在表table中id建立索引</strong></p>
-<ol>
-<li><strong>select col_A,col_B from table where id+1&gt;100 不会使用索引</strong></li>
-<li><strong>select col_A,col_B from table where id&gt;100+1 会使用索引</strong></li>
-</ol>
-<h2 id="3：sql优化"><a href="#3：sql优化" class="headerlink" title="3：sql优化"></a><strong>3：sql优化</strong></h2><ul>
-<li>线上尽量少使用 大sql,可能一条大sql就把整个数据库堵死，将复杂sql拆分为多条简单的sql,化繁为简</li>
-</ul>
-<ol>
-<li>一条sql只能在一个cpu运算,如果sql比较复杂执行效率会非常低</li>
-<li>简单sql缓存命中率更高</li>
-<li>减少锁表时间</li>
-<li>充分利用多核cpu，提高并发效率</li>
-</ol>
-<ul>
-<li>减少mysql端的数学运算和逻辑判断，避免sql语句出现md5()、order by rand()等</li>
-<li>过滤表记录合并不去重的情况，改写union为union all</li>
-<li>减少使用拼接sql,使用预编译语句，降低sql注入的概率</li>
-<li>where 条件中的非等值条件(in between &lt; &lt;= &gt; &gt;=)会导致使用不了联合索引的后续字段,注意避免</li>
-<li>where条件比较,字段类型和传入值必须保持类型一直,避免隐式转换</li>
-</ul>
-<p>​      <strong>示例</strong></p>
-<p>​         字段：code varchar(50) not null coment ‘编码’ #code 上建立了索引</p>
-<ol>
-<li>select * from table_name where code=10001；不会使用索引</li>
-<li>select * from table_name where code=’10001’；会使用索引</li>
-</ol>
-<ul>
-<li><strong>Limit 分页优化</strong></li>
-</ul>
-<ol>
-<li><strong>传统分页</strong></li>
-</ol>
-<p>select * from table limit 1000,10</p>
-<p>limit原理：</p>
-<p>LIMIT 接受一个或两个数字参数。参数必须是一个整数常量。如果给定两个参数，第一个参数指定第一个返回记录行的偏移量，第二个参数指定返回记录行的最大数目</p>
-<p>limit 1000,10//检索记录行1001-1010,偏移量越大则越慢</p>
-<ol>
-<li><strong>推荐分页</strong></li>
-</ol>
-<ul>
-<li><strong>分页方式1：</strong></li>
-</ul>
-<p>Select * from table WHERE id &gt;= ( select id from table limit 10000,1 ) limit 10;</p>
-<p>id是主键查询的速度比较快</p>
-<ul>
-<li><p><strong>分页方式2：</strong></p>
-</li>
-<li><p>程序取ID: Select id from table limit 10000,10;</p>
-</li>
-<li>Select * from table WHERE ID in(123,456…);</li>
-</ul>
-
+        <h1 id="mysql开发规范"><a href="#mysql开发规范" class="headerlink" title="mysql开发规范"></a><a href="https://www.cnblogs.com/LipeiNet/p/7799366.html" target="_blank" rel="noopener">mysql开发规范</a></h1>
       
     </div>
     
@@ -322,6 +231,10 @@
       
       <div class="clearfix"></div>
     </div>
+      
+        <p class="article-more-link">
+          <a href="/2018/12/17/2018-12-17-mysql开发规范/#more">more >></a>
+        </p>
       
     
   </div>
