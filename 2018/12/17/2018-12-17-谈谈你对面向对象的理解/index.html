@@ -3,22 +3,32 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>刘文旭</title>
+  <title>谈谈你对面向对象的理解 | 刘文旭</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一只小蚊子">
-<meta property="og:type" content="website">
-<meta property="og:title" content="刘文旭">
-<meta property="og:url" content="http://javar.xyz/index.html">
+  <meta name="description" content="​    在我理解,面向对象是向现实世界模型的自然延伸，这是一种“万物皆对象”的编程思想。在现实生活中的任何物体都可以归为一类事物，而每一个个体都是一类事物的实例。面向对象的编程是以对象为中心，以消息为驱动，所以程序=对象+消息。 面向对象有三大特性，封装、继承和多态。 ​    封装：就是将一类事物的属性和行为抽象成一个类，使其属性私有化，行为公开化，提高了数据的隐秘性的同时，使代码模块化。这样">
+<meta name="keywords" content="面试,面向对象">
+<meta property="og:type" content="article">
+<meta property="og:title" content="谈谈你对面向对象的理解">
+<meta property="og:url" content="http://javar.xyz/2018/12/17/2018-12-17-谈谈你对面向对象的理解/index.html">
 <meta property="og:site_name" content="刘文旭">
-<meta property="og:description" content="一只小蚊子">
+<meta property="og:description" content="​    在我理解,面向对象是向现实世界模型的自然延伸，这是一种“万物皆对象”的编程思想。在现实生活中的任何物体都可以归为一类事物，而每一个个体都是一类事物的实例。面向对象的编程是以对象为中心，以消息为驱动，所以程序=对象+消息。 面向对象有三大特性，封装、继承和多态。 ​    封装：就是将一类事物的属性和行为抽象成一个类，使其属性私有化，行为公开化，提高了数据的隐秘性的同时，使代码模块化。这样">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3128257767,3712134986&fm=173&s=81707D320352456C585580DA0000C0B2&w=640&h=382&img.JPEG">
+<meta property="og:image" content="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=1044661970,4061351378&fm=173&s=09207D33C91F544D1CFDA1DA0000C0B3&w=640&h=668&img.JPEG">
+<meta property="og:image" content="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2110635047,425985174&fm=173&s=092075334B6367241ADD81DA0000C0B3&w=640&h=125&img.JPEG">
+<meta property="og:image" content="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3968710668,3715354019&fm=173&s=81607532C91F644D4055D0DA0000C0B2&w=630&h=692&img.JPEG">
+<meta property="og:image" content="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3376414107,3704734320&fm=173&s=00207533C91F644D10FDA1DA0000C0B2&w=640&h=641&img.JPEG">
+<meta property="og:image" content="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=1149945926,119548839&fm=173&s=013075331B624D201CDCA1DA000050B2&w=640&h=270&img.JPEG">
+<meta property="og:image" content="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=166758062,1718097191&fm=173&s=E5E2F25D0BFECDC80024A05E0300C073&w=640&h=373&img.JPEG">
+<meta property="og:updated_time" content="2018-12-17T13:46:40.443Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="刘文旭">
-<meta name="twitter:description" content="一只小蚊子">
+<meta name="twitter:title" content="谈谈你对面向对象的理解">
+<meta name="twitter:description" content="​    在我理解,面向对象是向现实世界模型的自然延伸，这是一种“万物皆对象”的编程思想。在现实生活中的任何物体都可以归为一类事物，而每一个个体都是一类事物的实例。面向对象的编程是以对象为中心，以消息为驱动，所以程序=对象+消息。 面向对象有三大特性，封装、继承和多态。 ​    封装：就是将一类事物的属性和行为抽象成一个类，使其属性私有化，行为公开化，提高了数据的隐秘性的同时，使代码模块化。这样">
+<meta name="twitter:image" content="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3128257767,3712134986&fm=173&s=81707D320352456C585580DA0000C0B2&w=640&h=382&img.JPEG">
   
     <link rel="alternative" href="/atom.xml" title="刘文旭" type="application/atom+xml">
   
@@ -180,9 +190,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-2018-12-17-谈谈你对面向对象的理解" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-2018-12-17-谈谈你对面向对象的理解" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2018/12/17/2018-12-17-谈谈你对面向对象的理解/" class="article-date">
@@ -198,17 +206,31 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/17/2018-12-17-谈谈你对面向对象的理解/">
-        谈谈你对面向对象的理解
-        
-          <span class="title-pop-out">[置顶]</span></a>
-        
+    <h1 class="article-title" itemprop="name">
+      谈谈你对面向对象的理解
       
-    </h1>
+          <span class="title-pop-out">[置顶]
+      
+    </span></h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面向对象/">面向对象</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/面试/">面试</a>
+	</div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -254,452 +276,42 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-        <div class="article-pop-out tagcloud">
-          <a class="">置顶</a>
-        </div>
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面向对象/">面向对象</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/面试/">面试</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/12/17/2018-12-17-mysql开发规范/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">mysql开发规范</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
-
-
-
-
-
-  
-    <article id="post-2018-12-17-mysql开发规范" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/12/17/2018-12-17-mysql开发规范/" class="article-date">
-  	<time datetime="2018-12-17T12:47:44.000Z" itemprop="datePublished">2018-12-17</time>
-</a>
+<div class="ds-share share" data-thread-key="2018-12-17-谈谈你对面向对象的理解" data-title="谈谈你对面向对象的理解" data-url="http://javar.xyz/2018/12/17/2018-12-17-谈谈你对面向对象的理解/" data-images="http://pjv20i5zh.bkt.clouddn.com/javar_xyz_head.jpg" data-content="谈谈你对面向对象的理解">
+    <div class="ds-share-inline">
+      <ul class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
     </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/17/2018-12-17-mysql开发规范/">
-        mysql开发规范
-        
-      </a>
-    </h1>
-  
+ </div>
+ 
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文介绍一些基本的mysql数据库开发规范。</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/masql/">masql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发规范/">开发规范</a></li></ul>
-	</div>
 
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/数据库/">数据库</a>
-	</div>
 
 
-      
-      <div class="clearfix"></div>
-    </div>
-      
-        <p class="article-more-link">
-          <a href="/2018/12/17/2018-12-17-mysql开发规范/#more">more >></a>
-        </p>
-      
-    
-  </div>
-  
-</article>
 
-
-
-
-
-
-
-  
-    <article id="post-2018-12-17-mysql基础知识扫盲" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/12/17/2018-12-17-mysql基础知识扫盲/" class="article-date">
-  	<time datetime="2018-12-17T10:47:44.000Z" itemprop="datePublished">2018-12-17</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/17/2018-12-17-mysql基础知识扫盲/">
-        mysql基础知识扫盲
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本篇主要介绍关于mysql的一些非常基础的知识，为后面的sql优化做准备。</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/数据库/">数据库</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-        <p class="article-more-link">
-          <a href="/2018/12/17/2018-12-17-mysql基础知识扫盲/#more">more >></a>
-        </p>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-2018-12-15-数据库_30道面试题" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/12/15/2018-12-15-数据库_30道面试题/" class="article-date">
-  	<time datetime="2018-12-15T12:02:20.000Z" itemprop="datePublished">2018-12-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/15/2018-12-15-数据库_30道面试题/">
-        数据库_30道面试题
-        
-          <span class="title-pop-out">[置顶]</span></a>
-        
-      
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>数据库的知识，对于开发工程师来讲，也是同样重要，是开发过程中的重中之重，很多的业务逻辑，比如：报表模块等，只要sql语句能写出来，就相当于完成大部分的功能了，这是总结的数据库题库的前30道题，关于数据库的详细优化和集群等知识，后续会再出一篇，敬请关注。以下为关于数据库在面试过程中常见的30道题，供参考。</p>
-</blockquote>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-        <div class="article-pop-out tagcloud">
-          <a class="">置顶</a>
-        </div>
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据库/">数据库</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/面试/">面试</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-        <p class="article-more-link">
-          <a href="/2018/12/15/2018-12-15-数据库_30道面试题/#more">more >></a>
-        </p>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-2018-12-15-Java_100道面试题" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/12/15/2018-12-15-Java_100道面试题/" class="article-date">
-  	<time datetime="2018-12-15T11:52:05.000Z" itemprop="datePublished">2018-12-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/15/2018-12-15-Java_100道面试题/">
-        Java_100道面试题
-        
-          <span class="title-pop-out">[置顶]</span></a>
-        
-      
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>人帅话不多，社会我旭哥，直接上车，以下为总结的<font color="red">100道Java面试题及答案详解</font>，题比较多，建议先收藏。</p>
-</blockquote>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-        <div class="article-pop-out tagcloud">
-          <a class="">置顶</a>
-        </div>
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/面试/">面试</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-        <p class="article-more-link">
-          <a href="/2018/12/15/2018-12-15-Java_100道面试题/#more">more >></a>
-        </p>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-2018-12-15-常用网站" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/12/15/2018-12-15-常用网站/" class="article-date">
-  	<time datetime="2018-12-15T11:28:27.741Z" itemprop="datePublished">2018-12-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/15/2018-12-15-常用网站/">
-        常用网站
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>分享一些常用的工具网站。</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网站/">网站</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/常用网站/">常用网站</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-        <p class="article-more-link">
-          <a href="/2018/12/15/2018-12-15-常用网站/#more">more >></a>
-        </p>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-建站（基础篇）" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/12/16/建站（基础篇）/" class="article-date">
-  	<time datetime="2017-12-16T15:47:44.000Z" itemprop="datePublished">2017-12-16</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/16/建站（基础篇）/">
-        Hexo+git搭建个人网站
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>​    <strong>搭建个人博客=域名(外网可访问的地址)+外网服务器(外网存储文件图片的地方)+解析(本地与服务器做映射)</strong></p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/建站/">建站</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Hexo教程/">Hexo教程</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-        <p class="article-more-link">
-          <a href="/2017/12/16/建站（基础篇）/#more">more >></a>
-        </p>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -723,8 +335,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
