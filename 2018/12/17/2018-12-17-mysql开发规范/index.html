@@ -3,22 +3,24 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>刘文旭</title>
+  <title>mysql开发规范 | 刘文旭</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一只小蚊子">
-<meta property="og:type" content="website">
-<meta property="og:title" content="刘文旭">
-<meta property="og:url" content="http://javar.xyz/index.html">
+  <meta name="description" content="mysql开发规范1：库表设计 库名、表名、字段名采用小写字母,并采用下划线分割;对相关功能的表应该使用相同的前缀，如member_xxx,前缀通常为库名或依赖主实体对象; 所有的表以及字段都必须有备注、详细说明表以及字段的含义 涉及货币金额或其他精度敏感的数据必须使用定点数Decimal来替代float和double 库名、表名、字段名禁止使用mysql保留字,如data、like、desc等">
+<meta name="keywords" content="masql,开发规范">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql开发规范">
+<meta property="og:url" content="http://javar.xyz/2018/12/17/2018-12-17-mysql开发规范/index.html">
 <meta property="og:site_name" content="刘文旭">
-<meta property="og:description" content="一只小蚊子">
+<meta property="og:description" content="mysql开发规范1：库表设计 库名、表名、字段名采用小写字母,并采用下划线分割;对相关功能的表应该使用相同的前缀，如member_xxx,前缀通常为库名或依赖主实体对象; 所有的表以及字段都必须有备注、详细说明表以及字段的含义 涉及货币金额或其他精度敏感的数据必须使用定点数Decimal来替代float和double 库名、表名、字段名禁止使用mysql保留字,如data、like、desc等">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-17T10:59:59.593Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="刘文旭">
-<meta name="twitter:description" content="一只小蚊子">
+<meta name="twitter:title" content="mysql开发规范">
+<meta name="twitter:description" content="mysql开发规范1：库表设计 库名、表名、字段名采用小写字母,并采用下划线分割;对相关功能的表应该使用相同的前缀，如member_xxx,前缀通常为库名或依赖主实体对象; 所有的表以及字段都必须有备注、详细说明表以及字段的含义 涉及货币金额或其他精度敏感的数据必须使用定点数Decimal来替代float和double 库名、表名、字段名禁止使用mysql保留字,如data、like、desc等">
   
     <link rel="alternative" href="/atom.xml" title="刘文旭" type="application/atom+xml">
   
@@ -180,9 +182,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-2018-12-17-mysql开发规范" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-2018-12-17-mysql开发规范" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2018/12/17/2018-12-17-mysql开发规范/" class="article-date">
@@ -198,15 +198,29 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/17/2018-12-17-mysql开发规范/">
-        mysql开发规范
-        
-      </a>
+    <h1 class="article-title" itemprop="name">
+      mysql开发规范
+      
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/masql/">masql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发规范/">开发规范</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/数据库/">数据库</a>
+	</div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -306,382 +320,42 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/masql/">masql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发规范/">开发规范</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/数据库/">数据库</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/12/17/2018-12-17-mysql基础知识扫盲/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">mysql基础知识扫盲</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
-
-
-
-
-
-  
-    <article id="post-2018-12-17-mysql基础知识扫盲" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/12/17/2018-12-17-mysql基础知识扫盲/" class="article-date">
-  	<time datetime="2018-12-17T10:47:44.000Z" itemprop="datePublished">2018-12-17</time>
-</a>
+<div class="ds-share share" data-thread-key="2018-12-17-mysql开发规范" data-title="mysql开发规范" data-url="http://javar.xyz/2018/12/17/2018-12-17-mysql开发规范/" data-images="http://pjv20i5zh.bkt.clouddn.com/javar_xyz_head.jpg" data-content="mysql开发规范">
+    <div class="ds-share-inline">
+      <ul class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
     </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/17/2018-12-17-mysql基础知识扫盲/">
-        mysql基础知识扫盲
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="mysql基础知识扫盲"><a href="#mysql基础知识扫盲" class="headerlink" title="mysql基础知识扫盲"></a><a href="https://www.cnblogs.com/LipeiNet/p/6099849.html" target="_blank" rel="noopener">mysql基础知识扫盲</a></h1><p>本篇主要介绍关于mysql的一些非常基础的知识，为后面的sql优化做准备。</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/数据库/">数据库</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-        <p class="article-more-link">
-          <a href="/2018/12/17/2018-12-17-mysql基础知识扫盲/#more">more >></a>
-        </p>
-      
-    
-  </div>
-  
-</article>
+ </div>
+ 
 
 
 
 
 
-
-
-  
-    <article id="post-2018-12-15-数据库_30道面试题" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/12/15/2018-12-15-数据库_30道面试题/" class="article-date">
-  	<time datetime="2018-12-15T12:02:20.000Z" itemprop="datePublished">2018-12-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/15/2018-12-15-数据库_30道面试题/">
-        数据库_30道面试题
-        
-          <span class="title-pop-out">[置顶]</span></a>
-        
-      
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>数据库的知识，对于开发工程师来讲，也是同样重要，是开发过程中的重中之重，很多的业务逻辑，比如：报表模块等，只要sql语句能写出来，就相当于完成大部分的功能了，这是总结的数据库题库的前30道题，关于数据库的详细优化和集群等知识，后续会再出一篇，敬请关注。以下为关于数据库在面试过程中常见的30道题，供参考。</p>
-</blockquote>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-        <div class="article-pop-out tagcloud">
-          <a class="">置顶</a>
-        </div>
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据库/">数据库</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/面试/">面试</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-        <p class="article-more-link">
-          <a href="/2018/12/15/2018-12-15-数据库_30道面试题/#more">more >></a>
-        </p>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-2018-12-15-Java_100道面试题" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/12/15/2018-12-15-Java_100道面试题/" class="article-date">
-  	<time datetime="2018-12-15T11:52:05.000Z" itemprop="datePublished">2018-12-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/15/2018-12-15-Java_100道面试题/">
-        Java_100道面试题
-        
-          <span class="title-pop-out">[置顶]</span></a>
-        
-      
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>人帅话不多，社会我旭哥，直接上车，以下为总结的100道面试题及答案详解，题比较多，建议先收藏。</p>
-</blockquote>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-        <div class="article-pop-out tagcloud">
-          <a class="">置顶</a>
-        </div>
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/面试/">面试</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-        <p class="article-more-link">
-          <a href="/2018/12/15/2018-12-15-Java_100道面试题/#more">more >></a>
-        </p>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-2018-12-15-常用网站" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/12/15/2018-12-15-常用网站/" class="article-date">
-  	<time datetime="2018-12-15T11:28:27.741Z" itemprop="datePublished">2018-12-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/15/2018-12-15-常用网站/">
-        常用网站
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>分享一些常用的工具网站。</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网站/">网站</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/常用网站/">常用网站</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-        <p class="article-more-link">
-          <a href="/2018/12/15/2018-12-15-常用网站/#more">more >></a>
-        </p>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-建站（基础篇）" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/12/16/建站（基础篇）/" class="article-date">
-  	<time datetime="2017-12-16T15:47:44.000Z" itemprop="datePublished">2017-12-16</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/16/建站（基础篇）/">
-        Hexo+git搭建个人网站
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>​    <strong>搭建个人博客=域名(外网可访问的地址)+外网服务器(外网存储文件图片的地方)+解析(本地与服务器做映射)</strong></p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/建站/">建站</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Hexo教程/">Hexo教程</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-        <p class="article-more-link">
-          <a href="/2017/12/16/建站（基础篇）/#more">more >></a>
-        </p>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -705,8 +379,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
